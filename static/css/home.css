@@ -1,0 +1,167 @@
+/*
+   ESTILOS SEMÁNTICOS - DISEÑO LIMPIO
+   Aquí extraemos las clases largas de Tailwind para que el HTML sea legible.
+*/
+
+:root {
+  --color-primario: #42b883;
+  --fuente-principal: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--fuente-principal);
+}
+
+/* 1. NAVEGACIÓN */
+.barra-navegacion {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(226, 232, 240, 1); /* border-slate-200 */
+}
+
+/* Soporte para modo oscuro en la navegación */
+.dark .barra-navegacion {
+  background-color: rgba(15, 23, 42, 0.8); /* background-dark/80 */
+  border-color: rgba(30, 41, 59, 1); /* border-slate-800 */
+}
+
+.enlace-nav {
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.enlace-nav:hover {
+  color: var(--color-primario);
+}
+
+/* 2. TARJETAS DE CARACTERÍSTICAS */
+.tarjeta-caracteristica {
+  background-color: white;
+  border: 1px solid #f1f5f9;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.dark .tarjeta-caracteristica {
+  background-color: #0f172a;
+  border-color: #1e293b;
+}
+
+.tarjeta-caracteristica:hover {
+  border-color: var(--color-primario);
+  box-shadow: 0 20px 25px -5px rgba(66, 184, 131, 0.1);
+  transform: translateY(-4px);
+}
+
+/* 3. ICONOS Y BOTONES */
+.contenedor-icono {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  color: #64748b;
+}
+
+.dark .contenedor-icono {
+  background-color: #1e293b;
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+.tarjeta-caracteristica:hover .contenedor-icono {
+  background-color: var(--color-primario);
+  color: white;
+  border-color: var(--color-primario);
+  transform: rotate(5deg);
+}
+
+.boton-accion {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+.boton-secundario {
+  background-color: #f8fafc;
+  color: #475569;
+}
+
+.dark .boton-secundario {
+  background-color: #1e293b;
+  color: #cbd5e1;
+}
+
+/* Fix hover for both light and dark mode */
+.boton-secundario:hover {
+  background-color: var(--color-primario) !important;
+  color: white !important;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(66, 184, 131, 0.2);
+}
+
+/* 4. SECCIÓN ESPECIAL (COMPOSABLES) */
+.seccion-destacada {
+  margin-top: 5rem;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  .seccion-destacada {
+    padding: 4rem;
+  }
+}
+
+.badge-nuevo {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background-color: var(--color-primario);
+  font-size: 0.7rem;
+  font-weight: 800;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 5. FOOTER */
+.pie-pagina {
+  background-color: white;
+  border-top: 1px solid #f1f5f9;
+  padding: 4rem 0;
+  margin-top: 6rem;
+}
+
+.dark .pie-pagina {
+  background-color: #0f172a;
+  border-color: #1e293b;
+}
