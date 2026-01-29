@@ -4,13 +4,6 @@
 
 ---
 
-## 0. Rompiendo el hielo (Chiste malo 😅)
-
-¿Sabéis por qué los programadores preferimos Vue?
-Porque con tantas directivas y reactividad, ¡por fin algo en nuestra vida nos hace caso a la primera! 😂
-
----
-
 ## 1. El Inicio: Instalación y Configuración
 
 Antes de programar, hay que preparar el terreno:
