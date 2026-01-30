@@ -7,7 +7,8 @@ import { RouterView, RouterLink } from 'vue-router'
     <h1>Proyecto Vue 3</h1>
     <nav>
       <RouterLink to="/">Inicio</RouterLink> |
-      <RouterLink to="/about">Sobre Nosotros</RouterLink>
+      <RouterLink to="/about">Sobre Nosotros</RouterLink> |
+      <RouterLink to="/demos">Demos Vue 3</RouterLink>
     </nav>
   </header>
 
@@ -21,7 +22,7 @@ header {
   line-height: 1.5;
   max-height: 100vh;
   padding: 1rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ffffff;
   margin-bottom: 2rem;
 }
 
