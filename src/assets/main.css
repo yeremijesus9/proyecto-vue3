@@ -1,35 +1,339 @@
 @import './base.css';
 
+/* ========================================
+   ESTILOS GENERALES DE LA APLICACIÓN
+   ======================================== */
+
+/* Contenedor principal de la aplicación */
 #app {
-  max-width: 1280px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  padding: 0 1rem;
 }
 
+/* ========================================
+   ENLACES Y TEXTOS
+   ======================================== */
+
+/* Enlaces generales y texto verde */
 a,
-.green {
+.green,
+.text-green {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+a:hover,
+.green:hover,
+.text-green:hover {
+  color: hsla(160, 100%, 30%, 1);
+  opacity: 0.9;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+/* ========================================
+   HEADER Y NAVEGACIÓN
+   ======================================== */
 
+/* Estilos del encabezado */
+header {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 3rem 1rem 2rem;
+  margin-bottom: 3rem;
+  box-shadow: none;
+  transition: none;
+}
+
+header:hover {
+  box-shadow: none;
+}
+
+header h1 {
+  color: var(--color-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Navegación principal */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 0;
+  padding: 1rem 0;
+}
+
+nav a {
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  background: var(--color-background-soft);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  min-width: 120px;
+  text-align: center;
+}
+
+nav a:hover {
+  background: var(--color-background-mute);
+  border-color: var(--color-border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+nav a.router-link-active {
+  background: hsla(160, 100%, 37%, 1);
+  color: white;
+  border-color: hsla(160, 100%, 37%, 1);
+  box-shadow: 0 4px 12px hsla(160, 100%, 37%, 0.4);
+}
+
+nav a.router-link-active:hover {
+  background: hsla(160, 100%, 30%, 1);
+  border-color: hsla(160, 100%, 30%, 1);
+}
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+   ======================================== */
+
+/* Área de contenido principal */
+main {
+  background: var(--color-background-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2rem;
+  min-height: 60vh;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   COMPONENTES REUTILIZABLES
+   ======================================== */
+
+/* Contenedor genérico */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Tarjetas */
+.card {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  border-color: var(--color-border-hover);
+}
+
+/* ========================================
+   BOTONES
+   ======================================== */
+
+/* Botón base */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Botón primario */
+.btn-primary {
+  background: hsla(160, 100%, 37%, 1);
+  color: white;
+  box-shadow: 0 2px 4px hsla(160, 100%, 37%, 0.2);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: hsla(160, 100%, 30%, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px hsla(160, 100%, 37%, 0.3);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background: var(--color-background-mute);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--color-border);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* ========================================
+   CLASES DE UTILIDAD
+   ======================================== */
+
+/* Alineación de texto */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Márgenes inferiores */
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+/* Márgenes superiores */
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets y dispositivos medianos */
+@media (max-width: 768px) {
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    padding: 0 0.75rem;
+  }
+
+  header {
+    padding: 1rem 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    gap: 0.75rem;
+  }
+
+  nav a {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  #app {
+    padding: 0 0.5rem;
+  }
+
+  header {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  nav {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+  }
+
+  main {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .card {
+    padding: 0.75rem;
+    border-radius: 6px;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .container {
+    padding: 0 0.5rem;
   }
 }
