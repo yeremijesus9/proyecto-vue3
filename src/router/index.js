@@ -24,11 +24,6 @@ const router = createRouter({
       name: 'stiwar',
       component: () => import('../views/StiwarView.vue'),
     },
-    {
-      path: '/demos',
-      name: 'demos',
-      component: () => import('../views/DemosView.vue'),
-    },
   ],
 })
 

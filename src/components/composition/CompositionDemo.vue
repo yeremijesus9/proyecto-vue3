@@ -1,22 +1,28 @@
 <template>
   <div class="demo">
-    <h2>🔧 Composition API Simple</h2>
-    
+    <h2>🔧 Composition API</h2>
+
     <div class="section">
       <h3>1. setup() y ref()</h3>
-      <p>Mensaje: <strong>{{ mensaje }}</strong></p>
+      <p>
+        Mensaje: <strong>{{ mensaje }}</strong>
+      </p>
       <button @click="cambiarMensaje">Cambiar Mensaje</button>
     </div>
-    
+
     <div class="section">
       <h3>2. reactive()</h3>
-      <p>Objeto reactivo: <strong>{{ objeto.nombre }}</strong></p>
-      <input v-model="objeto.nombre" placeholder="Nombre">
+      <p>
+        Objeto reactivo: <strong>{{ objeto.nombre }}</strong>
+      </p>
+      <input v-model="objeto.nombre" placeholder="Nombre" />
     </div>
-    
+
     <div class="section">
       <h3>3. Composable personalizado</h3>
-      <p>Estado del Toggle: <strong>{{ toggle.estado.value ? 'ENCENDIDO' : 'APAGADO' }}</strong></p>
+      <p>
+        Estado del Toggle: <strong>{{ toggle.estado.value ? 'ENCENDIDO' : 'APAGADO' }}</strong>
+      </p>
       <button @click="toggle.cambiar">Alternar</button>
     </div>
   </div>
@@ -25,32 +31,33 @@
 <script setup>
 import { ref, reactive } from 'vue'
 
-// Composable simple
+// ==================== COMPOSABLE PERSONALIZADO ====================
+// Un composable es una función que encapsula lógica reutilizable
 function useToggle() {
-  const estado = ref(false)
-  const cambiar = () => estado.value = !estado.value
+  const estado = ref(false) // estado: false | true
+  const cambiar = () => (estado.value = !estado.value) // alterna el valor
   return { estado, cambiar }
 }
 
-// Ejemplo 1: ref
+// ==================== REF() - Ejemplo básico ====================
 const mensaje = ref('Hola Vue 3')
 const cambiarMensaje = () => {
   mensaje.value = '¡Mensaje actualizado con éxito!'
 }
 
-// Ejemplo 2: reactive
+// ==================== REACTIVE() - Para objetos ====================
 const objeto = reactive({
   nombre: 'Ana',
-  edad: 30
+  edad: 30,
 })
 
-// Ejemplo 3: Composable
+// ==================== USAR EL COMPOSABLE ====================
 const toggle = useToggle()
 </script>
 
 <style scoped>
 .demo {
-  background: #f3e5f5; /* Light purple */
+  background: #e3f2fd;
   padding: 20px;
   border-radius: 10px;
   margin: 20px 0;
@@ -59,15 +66,16 @@ const toggle = useToggle()
 .section {
   margin-bottom: 20px;
   padding: 10px;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-h2, h3 {
-  color: #7b1fa2;
+h2,
+h3 {
+  color: #1976d2;
 }
 button {
   margin: 5px;
   padding: 8px 12px;
-  background-color: #7b1fa2;
+  background-color: #1976d2;
   color: white;
   border: none;
   border-radius: 4px;
