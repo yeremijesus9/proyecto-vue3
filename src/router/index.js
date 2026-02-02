@@ -15,9 +15,10 @@ const router = createRouter({
       component: () => import('../views/MarlenView.vue'),
     },
     {
-      path: '/german',
+      path: '/german/:id?',
       name: 'german',
       component: () => import('../views/GermanView.vue'),
+      props: (route) => ({ id: route.params.id || 'German' }),
     },
     {
       path: '/stiwar',
