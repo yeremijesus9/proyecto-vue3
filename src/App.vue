@@ -21,6 +21,7 @@ header {
   line-height: 1.5;
   max-height: 100vh;
   padding: 1rem;
+  border-bottom: 1px solid #ffffff;
   margin-bottom: 2rem;
 }
 
