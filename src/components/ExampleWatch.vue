@@ -17,11 +17,7 @@ watch(nombre, (nuevoValor) => {
   <div>
     <h3>Ejemplo de watch</h3>
 
-    <input
-      type="text"
-      v-model="nombre"
-      placeholder="Escribe tu nombre"
-    />
+    <input type="text" v-model="nombre" placeholder="Escribe tu nombre" />
 
     <p>{{ mensaje }}</p>
   </div>

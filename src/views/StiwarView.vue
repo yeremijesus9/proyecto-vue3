@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Canva </h1>
+    <h1>Canva</h1>
   </div>
 </template>
 
