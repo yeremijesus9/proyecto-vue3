@@ -5,24 +5,23 @@
     <transition-group name="card" tag="div">
       <div class="card" key="1">
         <h3>📌 Ruta dinámica</h3>
-        <p>Ruta actual: <code>/german/{{ id }}</code></p>
+        <p>
+          Ruta actual: <code>/german/{{ id }}</code>
+        </p>
       </div>
 
       <div class="card" key="2">
         <h3>🚦 Cambiar ID dinámico</h3>
         <div class="buttons">
-          <router-link class="btn" to="/german/1">ID 1</router-link>
-          <router-link class="btn" to="/german/2">ID 2</router-link>
-          <router-link class="btn" to="/german/3">ID 3</router-link>
+          <router-link class="btn" to="/german/Yeremi">Yeremi</router-link>
+          <router-link class="btn" to="/german/Stiwar">Stiwar</router-link>
+          <router-link class="btn" to="/german/Marlen">Marlen</router-link>
         </div>
       </div>
 
       <div class="card highlight" key="3">
         <h3>💡 Lazy Loading</h3>
-        <p>
-          Este componente se carga solo cuando se visita la ruta,
-          optimizando el rendimiento.
-        </p>
+        <p>Este componente se carga solo cuando se visita la ruta, optimizando el rendimiento.</p>
       </div>
 
       <div class="card" key="4">
@@ -39,7 +38,7 @@
 
 <script setup>
 defineProps({
-  id: String
+  id: String,
 })
 </script>
 
@@ -59,7 +58,7 @@ defineProps({
   border-radius: 12px;
   padding: 18px;
   margin-bottom: 16px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
 .highlight {
