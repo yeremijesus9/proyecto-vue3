@@ -6,7 +6,7 @@ import { RouterView, RouterLink } from 'vue-router'
   <header>
     <h1>Proyecto Vue 3</h1>
     <nav>
-      <RouterLink to="/">Inicio</RouterLink> |
+      <RouterLink to="/">Yeremi</RouterLink> |
       <RouterLink to="/marlen">Marlen</RouterLink> |
       <RouterLink to="/german">German</RouterLink> |
       <RouterLink to="/stiwar">Stiwar</RouterLink> |
