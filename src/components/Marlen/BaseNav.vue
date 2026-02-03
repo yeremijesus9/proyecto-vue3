@@ -33,8 +33,7 @@ ul{
     gap: 2rem;
     list-style: none;
     color: white;
-    font-size: 1.5rem;
-    text-decoration: underline;
+    font-size: 1rem;
 }
 
 img{
