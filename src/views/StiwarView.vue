@@ -5,16 +5,16 @@
     <!-- Menú simple -->
     <div class="menu">
       <button @click="pagina = 'reactividad'" :class="{ active: pagina === 'reactividad' }">
-        🔗 Reactividad
+        Reactividad
       </button>
       <button @click="pagina = 'composition'" :class="{ active: pagina === 'composition' }">
-        🔧 Composition
+        Composition
       </button>
       <button @click="pagina = 'computed'" :class="{ active: pagina === 'computed' }">
-        📊 Computed
+        Computed
       </button>
       <button @click="pagina = 'guia'" :class="{ active: pagina === 'guia' }">
-        📚 Explicación de conceptos
+        Explicación de conceptos
       </button>
     </div>
 
@@ -56,15 +56,15 @@ const CompositionDemo = defineAsyncComponent(
   () => import('../components/composition/CompositionDemo.vue'),
 )
 const ComputedDemo = defineAsyncComponent(() => import('../components/computed/ComputedDemo.vue'))
-const JuniorGuide = defineAsyncComponent(
-  () => import('../components/documentation/JuniorGuide.vue'),
+const Explicacion = defineAsyncComponent(
+  () => import('../components/documentation/Explicacion.vue'),
 )
 
 const currentComponent = computed(() => {
   if (pagina.value === 'reactividad') return ReactividadDemo
   if (pagina.value === 'composition') return CompositionDemo
   if (pagina.value === 'computed') return ComputedDemo
-  if (pagina.value === 'guia') return JuniorGuide
+  if (pagina.value === 'guia') return Explicacion
   return null
 })
 </script>

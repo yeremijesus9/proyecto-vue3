@@ -1,6 +1,6 @@
 <template>
   <div class="demo">
-    <h2>📊 Computed & Watch</h2>
+    <h2>Computed & Watch</h2>
 
     <div class="section">
       <h3>1. computed() - Valor calculado</h3>

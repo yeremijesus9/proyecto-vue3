@@ -1,6 +1,6 @@
 <template>
   <div class="demo">
-    <h2>⚡ Reactividad</h2>
+    <h2>Reactividad</h2>
 
     <div class="section">
       <h3>1. ref() - Para valores <span class="badge">Números, Strings</span></h3>
@@ -8,7 +8,7 @@
         Contador: <strong>{{ contador }}</strong>
       </p>
       <button @click="contador++">Sumar 1</button>
-      <small class="tip">💡 ref() crea una referencia reactiva. Usa .value internamente.</small>
+      <small class="tip">ref() crea una referencia reactiva. Usa .value internamente.</small>
     </div>
 
     <div class="section">
@@ -18,7 +18,7 @@
       </p>
       <input v-model="usuario.nombre" placeholder="Cambia nombre" />
       <button @click="usuario.edad++">+1 año</button>
-      <small class="tip">💡 reactive() convierte objetos en reactivos sin .value</small>
+      <small class="tip">reactive() convierte objetos en reactivos sin .value</small>
     </div>
 
     <div class="section">
@@ -26,7 +26,7 @@
       <p>
         Contador Global desde aquí: <strong>{{ props.globalState.contador }}</strong>
       </p>
-      <small class="tip">💡 Los datos fluyen de padre a hijo a través de props</small>
+      <small class="tip">Los datos fluyen de padre a hijo a través de props</small>
     </div>
   </div>
 </template>

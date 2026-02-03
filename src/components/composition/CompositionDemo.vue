@@ -1,6 +1,6 @@
 <template>
   <div class="demo">
-    <h2>🔧 Composition API</h2>
+    <h2>Composition API</h2>
 
     <div class="section">
       <h3>1. setup() y ref()</h3>
@@ -31,7 +31,6 @@
 <script setup>
 import { ref, reactive } from 'vue'
 
-// ==================== COMPOSABLE PERSONALIZADO ====================
 // Un composable es una función que encapsula lógica reutilizable
 function useToggle() {
   const estado = ref(false) // estado: false | true
