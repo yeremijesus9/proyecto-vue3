@@ -3,7 +3,7 @@
     <h2>Explicación de conceptos</h2>
 
     <div class="concept-card">
-      <h3>🔗 ¿Qué es la reactividad?</h3>
+      <h3>¿Qué es la reactividad?</h3>
       <p>
         La reactividad significa que Vue <strong>automáticamente actualiza la vista</strong> cuando
         cambian los datos.
@@ -15,7 +15,7 @@
     </div>
 
     <div class="concept-card">
-      <h3>📦 ref() vs reactive()</h3>
+      <h3>ref() vs reactive()</h3>
       <div class="comparison">
         <div class="ref-example">
           <h4>ref() - Para valores simples</h4>
@@ -42,7 +42,7 @@
     </div>
 
     <div class="concept-card">
-      <h3>👀 watch() - Observar cambios</h3>
+      <h3> watch() - Observar cambios</h3>
       <p>Ejecuta código cuando algo específico cambia.</p>
       <div class="example">
         <code>watch(count, (newValue) => console.log('Cambié:', newValue))</code>
@@ -51,7 +51,7 @@
     </div>
 
     <div class="concept-card">
-      <h3>🔧 Composables - Lógica reutilizable</h3>
+      <h3>Composables - Lógica reutilizable</h3>
       <p>Funciones que encapsulan lógica reactiva para reutilizarla.</p>
       <div class="example">
         <code>const {counter, increment} = useCounter()</code>
