@@ -17,13 +17,7 @@
 
 
 <style scoped>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .contenedor-nav{
-    height: 200px;
     display: grid;
     grid-template-columns: 200px 1fr auto;
     background-color: #030c15;
@@ -34,11 +28,13 @@ ul{
     list-style: none;
     color: white;
     font-size: 1rem;
+    align-items: center;
+    padding-right: 1.5rem;
 }
 
 img{
     width: 160px;
-    height: 200px;
+    height: auto;
     margin-left: 1.5rem;
 }
 </style>

@@ -1,19 +1,12 @@
 <template>
-  <div>
+  <div class="pagina-principal">
     <BaseNav/>
-  </div>
-
-  <div>
-    <TituloSeccion/>
-  </div>
-
-  <div>
-    <PropsEmits
-    :integrantes="['Yeremi', 'Marlen', 'German', 'Stiwar']" @enviar="mostrarNombres"
-    />
-  </div>
-
-  <div>
+    <main class="container-principal">
+      <TituloSeccion/>
+      <PropsEmits
+      :integrantes="['Yeremi', 'Marlen', 'German', 'Stiwar']" @enviar="mostrarNombres"
+      />
+    </main>
     <BaseFooter/>
   </div>
 </template>
@@ -29,9 +22,18 @@ import BaseFooter from '@/components/Marlen/BaseFooter.vue';
 
 function mostrarNombres() {alert('Se presionó el botòn enviar!');}
 
-
 </script>
 
-<style scoped>
 
+
+<style scoped>
+.pagina-principal{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container-principal{
+  flex-grow: 1;
+  padding: 2rem;
+}
 </style>
