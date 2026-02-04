@@ -1,6 +1,22 @@
-<script setup>
+<script setup>const mostrarLazy = ref(false)
+const intervalId = ref(null)
+const colorFiesta = ref('#ffffff')
 import { useRouter, useRoute } from 'vue-router'
 import { ref, defineAsyncComponent, onUnmounted } from 'vue'
+const toggleFiesta = () => {
+  // Usamos .value para acceder y modificar la referencia
+  if (intervalId.value) {
+    clearInterval(intervalId.value)
+    intervalId.value = null
+    colorFiesta.value = '#ffffff' // Reset al color original
+  } else {
+    // Guardamos el ID del intervalo en .value
+    intervalId.value = setInterval(() => {
+      // Genera un color aleatorio hexadecimal
+      colorFiesta.value = `#${Math.floor(Math.random()*16777215).toString(16)}`
+    }, 500)
+  }
+}
 
 // 1. Obtenemos la instancia del router (para realizar acciones)
 const router = useRouter()
@@ -89,6 +105,7 @@ const simularBuild = () => {
       <button @click="toggleFiesta" class="btn-fiesta">
         {{ intervalId ? 'Apagar Fiesta 🛑' : 'Encender Fiesta 🎉' }}
       </button>
+      
     </div>
 
     <hr class="separador" />
