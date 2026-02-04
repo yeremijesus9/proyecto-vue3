@@ -1,5 +1,13 @@
 <script setup>
 import { RouterView, RouterLink } from 'vue-router'
+import MensajeComponente from './components/Marlen/MensajeComponente.vue';
+
+//Funciones para manejar los eventos del componente hijo
+const manejarMostrarMensaje = (mensaje) => {
+  console.log(mensaje)};
+
+const manejarOcultarMensaje = () =>   {
+  console.log('Mensaje ocultado')};
 </script>
 
 <template>
@@ -14,6 +22,13 @@ import { RouterView, RouterLink } from 'vue-router'
   </header>
 
   <main>
+    <MensajeComponente
+    v-if="$route.path === '/marlen'"
+    nombre="Marlen"
+    @mostrar-mensaje="manejarMostrarMensaje"
+    @ocultar-mensaje="manejarOcultarMensaje"
+    />
+    
     <RouterView />
   </main>
 </template>

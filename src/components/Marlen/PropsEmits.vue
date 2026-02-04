@@ -46,7 +46,7 @@ button{
     font-size: 1.5rem;
     border-radius: 0.5rem;
     cursor: pointer;
-    background-color: #00cf82;
+    background-color: #42b983;
     border: none;
     color: rgb(32, 32, 32);   
 }

@@ -1,9 +1,15 @@
 <template>
-        <h1>Componentes</h1>
+        <h1>{{ titulo }}</h1>
 </template>
 
 <script setup>
-
+// Definimos la prop para que acepte un texto personalizado
+defineProps({
+    titulo: {
+        type: String,
+        default:'Componentes'
+    }
+})
 </script>
 
 <style scoped>

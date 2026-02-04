@@ -1,6 +1,5 @@
 <template>
-    <div class="class mensaje">
-        <h2>Bienvenido, {{ nombre }}</h2>
+    <div class="mensaje">
         <button @click="manejarMostrarMensaje">Mostrar Mensaje</button>  
         <button @click="manejarOcultarMensaje">Ocultar Mensaje</button>  
     </div>
