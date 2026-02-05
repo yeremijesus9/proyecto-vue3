@@ -57,6 +57,7 @@ h2{
   width: 100%;
   background: #00cf82;
   font-size: 2rem;
+  border-radius: 0.5rem;
 }
 h3{
   font-size: 1.5rem;

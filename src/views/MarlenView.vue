@@ -12,7 +12,6 @@
         <TituloSeccion titulo="Comunicación entre Componentes y App.vue"/>
       </div>
       <ContenedorProvide/>
-
       <div class="contenedor-boton">
         <button @click="dispararSeñal" class="btn-demo">Activar Inyección</button>
       </div>
@@ -76,6 +75,7 @@ function mostrarNombres() {alert('Se presionó el botòn enviar!');}
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
+  font-size: 1rem;
 }
 .btn-demo:hover {
   background-color: #42b883;
