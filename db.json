@@ -1,0 +1,16 @@
+{
+  "ejemplos": [
+    {
+      "id": "1",
+      "titulo": "Tarea desde mi JSON Server local",
+      "completado": true,
+      "descripcion": "Este dato viene de un servidor local simulado con json-server."
+    },
+    {
+      "id": "2",
+      "titulo": "Aprender Composables",
+      "completado": false,
+      "descripcion": "Practicar con useFetch y useLocalStorage."
+    }
+  ]
+}

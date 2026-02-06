@@ -19,17 +19,18 @@ const manejarOcultarMensaje = () => {mensajeRecibido.value = ''};  //Funcion par
       <RouterLink to="/marlen">Marlen</RouterLink>
       <RouterLink to="/german">German</RouterLink>
       <RouterLink to="/stiwar">Stiwar</RouterLink>
+      <RouterLink to="/composables">Composables</RouterLink>
     </nav>
   </header>
 
-  <main>    
+  <main>
     <RouterView />
 
     <div v-if="$route.path === '/marlen'" class="zona-ejemplo">
       <h2 class="titulo-ejemplo">Comunicación entre Componentes y App.vue</h2>
       <h3 class="titulo-ejemplo">Comunicación Directa: Props y Emits</h3>
 
-      <ComunicacionConApp   
+      <ComunicacionConApp
         nombre="Marlen"
         @mostrar-mensaje="manejarMostrarMensaje"
         @ocultar-mensaje="manejarOcultarMensaje"
@@ -38,7 +39,7 @@ const manejarOcultarMensaje = () => {mensajeRecibido.value = ''};  //Funcion par
       <div v-if="mensajeRecibido" class="pantalla-mensaje"> {{ mensajeRecibido }} </div>
     </div>
   </main>
-  
+
 </template>
 
 <style scoped>
@@ -92,6 +93,6 @@ nav {
 }
 
 nav a {
-  margin-right: 0; 
+  margin-right: 0;
 }
 </style>

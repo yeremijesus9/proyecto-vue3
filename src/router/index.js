@@ -25,6 +25,11 @@ const router = createRouter({
       name: 'stiwar',
       component: () => import('../views/StiwarView.vue'),
     },
+    {
+      path: '/composables',
+      name: 'composables',
+      component: () => import('../views/ComposableView.vue'),
+    },
   ],
 })
 
