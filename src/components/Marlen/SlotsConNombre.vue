@@ -20,7 +20,6 @@
 .tarjetas {
   display: flex;
   flex-direction: column; 
-  width: 30%;
   border: 2px dashed #42b983;
   border-radius: 15px;
   background-color: #f0fdf4;
