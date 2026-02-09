@@ -5,9 +5,11 @@
         </div>
         <nav>
             <ul>
+                <li>Directivas</li>
                 <li>Componentes</li>
-                <li>Comunicación</li>
-                <li>Slots | Teleport</li>
+                <li>Router</li>
+                <li>Reatividad</li>
+                <li>Composables</li>
             </ul>
         </nav>
     </header>

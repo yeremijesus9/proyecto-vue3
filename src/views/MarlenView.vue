@@ -65,15 +65,15 @@
 
 <script setup>
 import { ref, provide, inject, onMounted, onUnmounted } from 'vue';
-import BaseNav from '@/components/Marlen/BaseNav.vue'
-import TituloSeccion from '@/components/Marlen/TituloSeccion.vue'
+import BaseNav from '@/components/Marlen/Bases/BaseNav.vue'
+import TituloSeccion from '@/components/Marlen/Bases/TituloSeccion.vue'
 import ParentChild from '@/components/Marlen/ParentChild.vue';
 import ContenedorProvide from '@/components/Marlen/ComunicacionEntreComp/ContenedorProvide.vue';
 import SlotsCajaSimple from '@/components/Marlen/SlotsComponentes/SlotsCajaSimple.vue';
 import SlotsConNombre from '@/components/Marlen/SlotsComponentes/SlotsConNombre.vue';
 import SlotsConAlcance from '@/components/Marlen/SlotsComponentes/SlotsConAlcance.vue';
 import ComponenteTeleport from '@/components/Marlen/ComponenteTeleport.vue';
-import BaseFooter from '@/components/Marlen/BaseFooter.vue';
+import BaseFooter from '@/components/Marlen/Bases/BaseFooter.vue';
 
 
 
@@ -81,6 +81,7 @@ import BaseFooter from '@/components/Marlen/BaseFooter.vue';
 FUNCION PARA ACTUAR COMO RECEPTOR DE LA LINEA 8
 --------------------------------------------------------*/
  function mostrarNombres() {
+  alert("¡El Padre recibió el evento del Hijo!");
  }
 /* ----------------------------------------------------------
 PARA PODER MOVER EL PROPS/EMITS DE FOOTER AL LUGAR QUE ESTA
@@ -112,6 +113,7 @@ onUnmounted(() => {
   Variable para controlar los botones de slots 
   ---------------------------------------------------------*/
  const mostrarSlots = ref(false);
+
  //funcion para activar el cambio
  const activarSlots = () => {
   mostrarSlots.value = true;

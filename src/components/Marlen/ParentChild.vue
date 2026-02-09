@@ -13,6 +13,8 @@
 
 
 <script setup>
+import {ref} from 'vue'
+
 // Props: recibirá la lista de nombres desde el padre
 const props = defineProps({
     integrantes: {
@@ -24,7 +26,6 @@ const props = defineProps({
 //Aqui es donde el hijo habla con el padre para avisarle que hicieron clic
 const emit = defineEmits(['enviar']) 
 
-import {ref} from 'vue'
 const mostrar = ref(false)
 </script>
 
