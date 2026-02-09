@@ -17,5 +17,6 @@ const datosDelHijo = "¡Hola desde el interior del hijo! 🤖";
   padding: 15px;
   border-radius: 8px;
   background-color: #ebf8ff;
+  color: red;
 }
 </style>

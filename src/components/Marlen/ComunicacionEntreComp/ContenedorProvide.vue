@@ -11,7 +11,7 @@ import NietoInject from './NietoInject.vue'
 
 <style scoped>
 .contenedor {
-    margin: 2rem auto;
+    margin: 4rem auto;
     width: 60%;
     color: black;
     background-color: #e0faf2;

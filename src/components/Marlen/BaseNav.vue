@@ -7,8 +7,7 @@
             <ul>
                 <li>Componentes</li>
                 <li>Comunicación</li>
-                <li>Slots y Teleport</li>
-                <li>CSS global y scoped</li>
+                <li>Slots | Teleport</li>
             </ul>
         </nav>
     </header>

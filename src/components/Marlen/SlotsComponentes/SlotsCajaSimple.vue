@@ -1,8 +1,6 @@
 <template>
   <div class="caja-especial">
-    <slot>
-      <p>⚠️ No hay contenido disponible en este momento.</p>
-    </slot>
+    <slot></slot>
   </div>
 </template>
 
