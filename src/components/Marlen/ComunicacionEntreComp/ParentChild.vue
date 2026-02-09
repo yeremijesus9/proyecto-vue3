@@ -1,19 +1,6 @@
-<template>
-    <div class="caja">
-        <h2>Nombres Integrantes</h2>
-        <button @click="mostrar = true; emit('enviar')">Enviar</button>
-        
-    <ul v-if="mostrar">
-        <li v-for="(nombre, index) in props.integrantes" :key="index">{{ nombre }}</li>
-    </ul>
-    </div>
-
-
-</template>
-
-
 <script setup>
 import {ref} from 'vue'
+const mostrar = ref(false)
 
 // Props: recibirá la lista de nombres desde el padre
 const props = defineProps({
@@ -22,19 +9,27 @@ const props = defineProps({
         required: true
     }
 })
-
 //Aqui es donde el hijo habla con el padre para avisarle que hicieron clic
 const emit = defineEmits(['enviar']) 
-
-const mostrar = ref(false)
 </script>
+
+<template>
+    <div class="caja">
+        <p>Comunicación Directa: Props y Emits</p>
+        <h2>Nombres Integrantes</h2>
+        <button @click="mostrar = true; emit('enviar')">Enviar</button>
+        
+    <ul v-if="mostrar">
+        <li v-for="(nombre, index) in props.integrantes" :key="index">{{ nombre }}</li>
+    </ul>
+    </div>
+</template>
 
 
 <style scoped>
 .caja{
     margin: 3rem auto;
-    width: 50%;
-
+    width: 60%;
     color: black;
     background-color: #e0faf2;
     text-align: center;
@@ -42,7 +37,6 @@ const mostrar = ref(false)
     border-radius: 1.5rem;
 }
 button{
-
     margin-top: 1rem;
     font-size: 1.5rem;
     border-radius: 0.5rem;
@@ -67,5 +61,12 @@ ul {
 
 li {
   margin: 0.5rem 0;
+}
+p{
+    font-size: 1.5rem;
+    background-color: #42b983;
+    color: white;
+    font-weight: bold;
+    border-radius: 1rem;
 }
 </style>

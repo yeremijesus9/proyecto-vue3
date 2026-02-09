@@ -1,3 +1,10 @@
+<script setup>
+import { ref } from 'vue';
+
+const visible = ref(false);
+</script>
+
+
 <template>
     <div class="contenedor-demo">
         <button @click="visible = true" class="btn-alerta">
@@ -15,11 +22,6 @@
 
 
 
-<script setup>
-import { ref } from 'vue';
-
-const visible = ref(false);
-</script>
 
 
 <style scoped>
