@@ -64,6 +64,7 @@ FUNCION PARA ACTUAR COMO RECEPTOR DE PARENTCHILD
         <div class="contenedor-slots">
           <SlotsCajaSimple>
             <div v-if="mostrarSlots">
+              <h3>(Default Slot)</h3>
               <h4>Slot por Defecto</h4>
               <p><hr> Hola, yo soy el contenido del padre</p>
             </div>
@@ -73,6 +74,7 @@ FUNCION PARA ACTUAR COMO RECEPTOR DE PARENTCHILD
 
           <SlotsConNombre>
             <template #foto>
+              <h3>(Named Slots)</h3>
               <h4 class="slots-name">Slots con Nombre</h4>
               <img src="../assets/logo.svg" width="100px" alt="logo vue">
             </template>
@@ -85,6 +87,7 @@ FUNCION PARA ACTUAR COMO RECEPTOR DE PARENTCHILD
           
           <SlotsConAlcance v-slot="{mensaje}">
             <div v-if="mostrarSlots">
+              <h3>(Scoped Slots)</h3>
               <h4>Slots con Alcance</h4>
               <p><hr><strong>{{ mensaje }}</strong></p>
             </div>
@@ -166,6 +169,10 @@ h4{
   font-weight: bold;
 }
 .slots-name{
+  font-size: 1.5rem;
+}
+h3{
+  color: black;
   font-size: 1.5rem;
 }
 </style>
