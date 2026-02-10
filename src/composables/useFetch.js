@@ -3,15 +3,13 @@ import { ref, watchEffect, toValue } from 'vue'
 export function useFetch(url) {
   const data = ref(null)
   const error = ref(null)
-  const loading = ref(false)
+  const loading = ref(true)
 
   const fetchData = async () => {
     loading.value = true
-    error.value = null
     try {
-      // toValue permite manejar tanto strings normales como refs
       const response = await fetch(toValue(url))
-      if (!response.ok) throw new Error('Error al obtener los datos')
+      if (!response.ok) throw new Error('Error al conectar con el servidor')
       data.value = await response.json()
     } catch (err) {
       error.value = err.message
@@ -20,10 +18,7 @@ export function useFetch(url) {
     }
   }
 
-  // watchEffect rastrea automáticamente si 'url' (si es ref) cambia
-  watchEffect(() => {
-    fetchData()
-  })
+  watchEffect(() => fetchData())
 
-  return { data, error, loading, retry: fetchData }
+  return { data, error, loading }
 }
